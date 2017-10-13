@@ -1,4 +1,7 @@
-<footer>
+
+
+    <a href="#" class="scrollup">Scroll</a> 
+    <footer>
     
     <div class="columns seventeen">
     	<div class="margin_top3"></div>
@@ -86,14 +89,14 @@
                 <div class="columns four last">
                 	<h4>Chat</h4>
                     <div class="any_questions">
-                        <img src="images/site-img6.jpg" alt="" class="img_left" />
+                        <img src="<?= base_url('assets/images/site-img6.jpg') ?>" alt="" class="img_left" />
                         <p class="nomar_top">Possui dúvidas? <a href="contato.php">Acesse nosso chat</a>  ou ligue para:</p>
                         <div class="margin_top1"></div>
                         <h4><i>Tel.:</i>  (11) 3919-2629</h4>
                     </div>
                     
                     <div class="live_chat">
-                        <a href="contato.php"><img src="images/livechat-icon.png" alt="" class="img_left" /></a>
+                        <a href="contato.php"><img src="<?= base_url('assets/images/livechat-icon.png') ?>" alt="" class="img_left" /></a>
                         <h2><a href="contato.php">Contato <i> <br />direto conosco</i></a></h2>
                     </div>
                 </div> <!-- /columns four -->
@@ -119,3 +122,9 @@
     </div> <!-- /columns seventeen -->
 
 </footer>
+    
+    </div> <!-- /container -->
+</div> <!-- /page-wrapper -->
+
+</body>
+</html>

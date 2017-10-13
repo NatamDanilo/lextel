@@ -1,5 +1,9 @@
 <?php 
-$this->load->view('includes_pages/header');
-$this->load->view('includes_pages/menu');
-$this->load->view('pages/'.$page);
-$this->load->view('includes_pages/footer');
+$this->load->view('includes/header');
+if($this->uri->segment(1) == 'residencial'):
+    $this->load->view('includes/menu_residencial');
+    else:
+    $this->load->view('includes/menu_empresa');
+endif;
+$this->load->view('pages_residencial/'.$page);
+$this->load->view('includes/footer');
