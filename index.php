@@ -1,310 +1,308 @@
-<!DOCTYPE HTML>
-<html lang="pt-BR">
-    <head>
-        
-    	<meta charset="utf-8">
-    	<meta name="keywords" content="" /> 
-        <meta name="description" content="" /> 
-        
-    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-            
-        <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Archivo+Narrow|Oswald:400,700' rel='stylesheet' type='text/css'>
-        
-    	<title>Alexcom | Soluções Tecnológicas</title>
-        
-        <meta name="keywords" content="" /> 
-        <meta name="description" content="" />  
-        
-    	<link rel="shortcut icon" href="images/favicon.ico">
-        
-    	<link rel="stylesheet" href="styles/base.css" />
-    	<link rel="stylesheet" href="styles/skeleton.css" />
-    	<link rel="stylesheet" href="styles/layout.css" />
-            
-        <link rel="stylesheet" type="text/css" href="js/rs-plugin/css/responsive.css" media="screen" />
-    	<link rel="stylesheet" type="text/css" href="js/rs-plugin/css/settings.css" media="screen" />
+<?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014 - 2017, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright	Copyright (c) 2014 - 2017, British Columbia Institute of Technology (http://bcit.ca/)
+ * @license	http://opensource.org/licenses/MIT	MIT License
+ * @link	https://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
 
-        <link rel="stylesheet" media="screen" href="js/shortslide/common.css" />
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ */
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
-        
-        <!-- Short Slide -->
-        <script src="js/shortslide/_lib/jquery-1.8.2.min.js"></script>
-    	<script src="js/shortslide/_lib/jquery.easing-1.3.js"></script>
-    	<script src="js/shortslide/_js/common.js"></script>
-        <script src="js/shortslide/_src/jquery.iosslider.js"></script>
-         
-        <!-- Main Menu -->  
-        <script type="text/javascript" src="js/mainmenu/ddsmoothmenu.js"></script>
-        <script type="text/javascript" src="js/mainmenu/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="js/mainmenu/selectnav.js"></script>
-        <script type="text/javascript" src="js/mainmenu/scripts.js"></script>
-        
-        <!-- Revolution Banner  -->
-    	<script type="text/javascript" src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-        <script type="text/javascript" src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-        <script type="text/javascript" src="js/rs-plugin/js/custom.js"></script>
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+switch (ENVIRONMENT)
+{
+	case 'development':
+		error_reporting(-1);
+		ini_set('display_errors', 1);
+	break;
 
-        <script type="text/javascript" src="js/config.js"></script>
-        
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        
-    </head>
+	case 'testing':
+	case 'production':
+		ini_set('display_errors', 0);
+		error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+	break;
 
-<body>
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
 
-<div id="page-wrapper">
-    <div class="container"> 
-        <?php include('includes/header.php'); ?>
-        <?php include('includes/slider.php'); ?>
-    
-<div class="columns seventeen">
-	
-    <div class="punchline_text">
-        <div class="site_goto_center_two">
-            A Alexcom leva para sua residência e empresa o melhor da internet com velocidades incríveis. <br />Tudo para você poder navegar e administrar em um ambiente tecnológico seguro.
-            </div>
-        <div class="down_arrow2"></div>
-    </div>
-    
-<!-- Content --> 
-<div class="columns seventeen">
-	<div class="site_goto_center">
-    <div class="margin_top3"></div>
-	<div class="columns thirteen first">
-    	
-      <h2>Precisa de um site?</h2>
-        
-      <div class="newwebsite_area">
-        
-        <div class="newwebsite_left">
-        	<h6>Você ainda não tem um site?</h6>
-            <p>Está esperando o que? <br />A Alexcom tem a solução <br />perfeita para o seu negócio.</p>
-            <br />
-            <a href="orcamento.php" class="button_sw">Orçamento</a></div>
-        
-        <div class="newwebsite_center"></div>
-        
-        <div class="newwebsite_right">
-        	<ul>
-            	<li><img src="images/host-icon1.png" alt=""><br />Hospedagem Grátis*</li>
-                <li><img src="images/host-icon3.png" alt=""><br />E-mails Ilimitados</li>
-                <li><img src="images/host-icon8.png" alt=""><br />Painel de Controle</li>
-                <li><img src="images/host-icon2.png" alt=""><br />Sistemas Gerenciáveis</li>
-                <li><img src="images/host-icon4.png" alt=""><br />Lojas de Ecommerce</li>
-                <li><img src="images/host-icon5.png" alt=""><br />Atualizações Frequentes</li>
-                <li><img src="images/host-icon7.png" alt=""><br />Suporte 24/7</li>
-                <li><img src="images/host-icon6.png" alt=""><br />Torne-se Líder</li>
-            </ul>
-            <span class="aviso">*Somente para clientes que fizerem o site conosco.</span>
-        </div>
-    </div>
-    </div>
-    <!-- end New website --> 
+/*
+ *---------------------------------------------------------------
+ * SYSTEM DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" directory.
+ * Set the path if it is not in the same directory as this file.
+ */
+	$system_path = 'system';
 
-    <div class="columns four">
-    
-        <h2>Hospedagem</h2>
-        <div class="hot_offers">
-        
-        	<div class="cross_img_right">
-            	<h5>Faça seu<br />
-				site conosco.</h5>
-                <h6><i>E ganhe 1 ano de hospedagem</i></h6>
-                <h1>Grátis!</h1>
-			</div>
-        </div>
-    </div>
-    <!-- end Hot offers --> 
-	</div>
-</div>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * directory than the default one you can set its name here. The directory
+ * can also be renamed or relocated anywhere on your server. If you do,
+ * use an absolute (full) server path.
+ * For more info please see the user guide:
+ *
+ * https://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ */
+	$application_folder = 'application';
+
+/*
+ *---------------------------------------------------------------
+ * VIEW DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want to move the view directory out of the application
+ * directory, set the path to it here. The directory can be renamed
+ * and relocated anywhere on your server. If blank, it will default
+ * to the standard location inside your application directory.
+ * If you do move this, use an absolute (full) server path.
+ *
+ * NO TRAILING SLASH!
+ */
+	$view_folder = '';
 
 
-<div class="columns seventeen">
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here. For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT: If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller. Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ */
+	// The directory name, relative to the "controllers" directory.  Leave blank
+	// if your controller is not in a sub-directory within the "controllers" one
+	// $routing['directory'] = '';
 
-	<div class="margin_top4"></div>
+	// The controller class file name.  Example:  mycontroller
+	// $routing['controller'] = '';
 
-	<div class="hosting_plans_area_main">
-    
-    <div class="site_goto_center">
-    
-    <div class="hosting_plans_area">
-    	<div class="hosting_plans_center_div">
-        <div class="plan_box">
-        	<div class="plan_box_price"><h3>R$ 12,90<br /><i>/mês</i></h3></div>
-            <div class="plan_box_title"><h3>Hospedagem<br /> Smart</h3></div>
-            <div class="plan_box_content">
-                <ul>
-                    <li>Espaço em Disco 5GB</li>
-                    <li>Transferência ILIMITADA</li>
-                    <li>5 Contas de E-mail</li> 
-                    <li>1 Database</li>
-                    <li>Domínio Único</li>
-                    <li>SSL Compartilhado</li>
-                    <li>Suporte 24/7</li>
-                    <li style="color: #fff; background: none;">x</li>
-                </ul>
-                <h6><a href="assine.php" class="plans_button">Contratar!</a></h6>
-           	</div>
-        	<div class="plan_box_shadow"></div>
-        </div><!-- end a Plan --> 
-        
-        <div class="plan_box">
-        	<div class="plan_box_price"><h3>R$ 19,90<br /><i>/mês</i></h3></div>
-            <div class="plan_box_title"><h3>Hospedagem<br />Basic</h3></div>
-            <div class="plan_box_content">
-                <ul>
-                    <li>Espaço em Disco 10GB</li>
-                    <li>Transferência ILIMITADA</li>
-                    <li>10 Contas de E-mail</li>
-                    <li>1 Database</li>
-                    <li>Domínio Único</li>
-                    <li>SSL Compartilhado</li>
-                    <li>Suporte 24/7</li>
-                    <li style="color: #fff; background: none;">x</li>
-                </ul>
-                <h6><a href="assine.php" class="plans_button">Contratar!</a></h6>
-           	</div>
-        	<div class="plan_box_shadow"></div>
-        </div><!-- end a Plan -->
-        
-        <div class="plan_box">
-        	<div class="plan_box_price"><h3>R$ 27,90<br /><i>/mês</i></h3></div>
-            <div class="plan_box_title"><h3>Hospedagem<br /> Professional</h3></div>
-            <div class="plan_box_content">
-                <ul>
-                    <li>Espaço em Disco 20GB</li>
-                    <li>Transferência ILIMITADA</li>
-                    <li>20 Contas de E-mail</li>
-                    <li>2 Databases</li>
-                    <li>2 Domínios</li>
-                    <li>Sub-Domínios Ilimitados</li>
-                    <li>SSL Compartilhado</li>
-                    <li>Suporte 24/7</li>
-                </ul> 
-                <h6><a href="assine.php" class="plans_button">Contratar!</a></h6>
-           	</div>
-        	<div class="plan_box_shadow"></div>
-        </div><!-- end a Plan -->
-        
-        <div class="plan_box last">
-        	<div class="plan_box_price"><h3>R$ 59,90<br /><i>/mês</i></h3></div>
-            <div class="plan_box_title"><h3>Hospedagem<br /> Business</h3></div>
-            <div class="plan_box_content">
-                <ul>
-                    <li>Espaço em Disco 50GB</li>
-                    <li>Transferência ILIMITADA</li>
-                    <li>50 Contas de E-mail</li>
-                    <li>5 Databases</li>
-                    <li>3 Domínios</li>
-                    <li>Sub-Domínios Ilimitados</li>
-                    <li>SSL Compartilhado</li>
-                    <li>Suporte 24/7</li>
-                </ul>
-                <h6><a href="assine.php" class="plans_button">Contratar!</a></h6>
-           	</div>
-        	<div class="plan_box_shadow"></div>
-        </div><!-- end a Plan -->
-    </div>
-    </div>
-    </div>
-     <div class="waves_graphic"></div>
-    </div>
-</div><!-- end all Plans -->
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
+
+
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
 
 
 
-<div class="columns seventeen">
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
 
-	<div class="site_goto_center">
-	
-    <div class="margin_top4"></div>
-	<div class="site_center_div">
-	<div class="columns eight">
-    	
-        <h3 class="with_line">Porque escolher a Alexcom?</h3>
-    
-    	<ul class="whyus">
-        	<li><h3>1</h3>Internet Rápida</li>
-            <li><h3>2</h3>Backbone Próprio</li>
-            <li class="last"><h3>3</h3>Fibra Óptica</li>
-            <li><h3>4</h3>Suporte 24hs</li>
-            <li><h3>5</h3>Data Center</li>
-            <li class="last"><h3>6</h3>Qualidade Garantida</li>
-        </ul> 
-    </div>
-    <!-- end Why choose us -->
-    </div>
-    
-    <div class="columns eight last">
-		
-        <h3 class="with_line">Notícias</h3>
-        
-        <div id="testimonials_area">
-        <div class='short-width-slider-3'>
-		
-			<div class='slider'> 
-				<div class='item' id='1'>				  
-				  <img src="images/voz.jpg" alt="" class="img_border3" />
-				  <h6>Serviço de Voz</h6>
-				  <div class="margin_top0"></div>
-				  <p>A partir de setembro iremos trabalhar com serviços de Voz. Em breve você terá o melhor da telefonia em um só lugar.</p>
-                </div>
-                <!-- end one slide -->
-                
-                <div class='item' id='2'>                  
-                  <img src="images/tv.jpg" alt="" class="img_border3" />
-                  <h6>TV A Cabo</h6>
-                  <div class="margin_top0"></div>
-                  <p>A Alexcom está trazendo pra você a TV a cabo, fique ligado e obtenha uma TV a cabo em sua residência.</p>
-              	</div>
-              	<!-- end one slide -->
-                
-                <div class='item' id='3'>                  
-                  <img src="images/site-img9.jpg" alt="" class="img_border3" />
-                  <h6>Parceria de Sucesso</h6>
-                  <div class="margin_top0"></div>
-                  <p>O Grupo Alexcom está crescendo, agora participa do quadro social de uma das empresas mais conceituadas no Marketing Digital, a Agência XXXXX.</p>
-              	</div>
-              	<!-- end one slide -->
-				</div>
-		</div>
-        	<div class = 'prev'></div>
-			<div class = 'next'></div>
-        </div>
-    </div>
-    <!-- end what people say’s -->
-    
-    
-    <div class="columns seventeen">
-    	<div class="margin_top1"></div>
-    	
-    	<div class="clients">
-        	<div class="clients_title">
-            	<h3>Clientes<br />e parceiros</h3>
-            </div>
-            
-            <ul class="clients_logos_list">
-            	<li><img src="images/clients_logo1.jpg" alt="" /></li>
-                <li><img src="images/clients_logo2.jpg" alt="" /></li>
-                <li><img src="images/clients_logo3.jpg" alt="" /></li>
-                <li><img src="images/clients_logo4.jpg" alt="" /></li>
-                <li><img src="images/clients_logo5.jpg" alt="" /></li>
-                <li><img src="images/clients_logo6.jpg" alt="" /></li>
-            </ul>
-        </div>
-    </div>
-    </div><!-- end our clients --> 
-</div>
-<!-- end Content --> 
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
 
-    <a href="#" class="scrollup">Scroll</a> 
-    <?php include('includes/footer.php'); ?>
-    
-    </div> <!-- /container -->
-</div> <!-- /page-wrapper -->
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
 
-</body>
-</html>
+	if (($_temp = realpath($system_path)) !== FALSE)
+	{
+		$system_path = $_temp.DIRECTORY_SEPARATOR;
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = strtr(
+			rtrim($system_path, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// Path to the system directory
+	define('BASEPATH', $system_path);
+
+	// Path to the front controller (this file) directory
+	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
+
+	// Name of the "system" directory
+	define('SYSDIR', basename(BASEPATH));
+
+	// The path to the "application" directory
+	if (is_dir($application_folder))
+	{
+		if (($_temp = realpath($application_folder)) !== FALSE)
+		{
+			$application_folder = $_temp;
+		}
+		else
+		{
+			$application_folder = strtr(
+				rtrim($application_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+	{
+		$application_folder = BASEPATH.strtr(
+			trim($application_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
+
+	// The path to the "views" directory
+	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.'views';
+	}
+	elseif (is_dir($view_folder))
+	{
+		if (($_temp = realpath($view_folder)) !== FALSE)
+		{
+			$view_folder = $_temp;
+		}
+		else
+		{
+			$view_folder = strtr(
+				rtrim($view_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.strtr(
+			trim($view_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
